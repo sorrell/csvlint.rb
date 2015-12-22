@@ -62,8 +62,9 @@ module Csvlint
     def initialize(source, dialect = {}, schema = nil, options = {})
       reset
       @source = source
+      $bigFile = (File.size(source) > 2000000) ? true : false
       @formats = []
-      @schema = schema
+      @schema = $schema = schema
       @dialect = dialect
       @csv_header = true
       @headers = {}

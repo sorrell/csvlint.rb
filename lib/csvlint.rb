@@ -25,3 +25,7 @@ require 'csvlint/csvw/table'
 require 'csvlint/csvw/table_group'
 
 require 'csvlint/schema'
+require 'csvlint/resultOutput'
+
+$schema = nil;
+$bigFile = false;
